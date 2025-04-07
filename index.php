@@ -6,19 +6,16 @@ class Fruits
     public $name;
     public $color;
 
-    //set name method
-    public function set_name($name){
+    //create a constructor
+    public function __construct($name, $color) {
         $this->name = $name;
+        $this->color = $color;
     }
+   
 
     //get Name method
     public function get_name(){
         return $this->name;
-    }
-
-    //set Color method
-    public function set_color($color){
-        $this->color = $color;
     }
 
     //get Color method 
@@ -27,27 +24,15 @@ class Fruits
     }
 }
 
-$bannana = new Fruits;
-$bannana->set_name('Banana');
+$bannana = new Fruits('Banana','Green');
+echo $bannana->name;
 
-echo $bannana->get_name();
-echo "<br>";
-
-$apple = new Fruits;
-$apple->set_name('Apple');
-
-echo $apple->get_name();
 
 echo "<br>";
 echo "<br>";
 
-$color = new Fruits;
-$color->set_color("Red");
-
-$color2 = new Fruits;
-$color2->set_color("Blue");
-
+$apple = new Fruits('Apple','Red');
 echo "<br>";
-echo $color->get_color();
-echo "<br>";
-echo $color2->get_color();
+echo $apple->name;
+echo "    -> ";
+echo $apple->color;
