@@ -29,21 +29,7 @@
 
  echo $type->intro();
 
-//define interface (interface does not need property declearation)
- interface Animal{
-    public function makeSound();
- }
 
- //create child class
- class Cat implements Animal {
-    public function makeSound(){
-        return "<br> Meeewwwo";
-    }
- }
-
- $cat = new Cat;
-
- echo $cat->makeSound();
 
 /**class Fruits
 {
