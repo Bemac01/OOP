@@ -1,6 +1,51 @@
 <?php
+ 
+ abstract class Car {
+    public $name;
+    
 
-class Fruits
+    //construct
+    public function __construct($name){
+        $this->name = $name;
+       
+    }
+
+    //abstract intro method
+    abstract public function intro() : String;
+    
+
+ }
+
+//child class of Parent class Car
+ class Volvo extends Car {
+    public function intro(): String
+    {
+        return "This car is a $this->name is made in Garmany";
+    }
+}
+
+//class insta.
+ $type = new Volvo("Volvo");
+
+ echo $type->intro();
+
+//define interface (interface does not need property declearation)
+ interface Animal{
+    public function makeSound();
+ }
+
+ //create child class
+ class Cat implements Animal {
+    public function makeSound(){
+        return "<br> Meeewwwo";
+    }
+ }
+
+ $cat = new Cat;
+
+ echo $cat->makeSound();
+
+/**class Fruits
 {
     //create properties 
     public $name;
@@ -35,4 +80,4 @@ $apple = new Fruits('Apple','Red');
 echo "<br>";
 echo $apple->name;
 echo "    -> ";
-echo $apple->color;
+echo $apple->color;*/
